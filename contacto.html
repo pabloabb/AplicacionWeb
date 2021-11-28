@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,14 +15,17 @@
     rel="stylesheet">
 </head>
 
+
 <body>
+
+  <!-- CABECERA -->
   <header class="cabecera">
     <div class="cabeceraLogo">
       <a href="./index.html">
         <img src="./images/logo.png" alt="logo" />
       </a>
     </div>
-    <nav>
+    <nav class="menuCompleto">
       <ul>
         <li><a href="./index.html">Inicio</a></li>
         <li><a href="./caracteristicas.html">Características</a></li>
@@ -30,61 +34,130 @@
         <li><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
+
+    <div class="menuHamburguesa">
+      <a href="./index.html">
+        <img src="./images/hamburger4.png" alt="hamburger" />
+      </a>
+    </div>
   </header>
 
-  <h1>Contacto</h1>
 
-  <section>
-    <div class="formularioContacto">
-      <form method="post" action="">
-        <label for="nombre">Tu nombre:</label>
-        <input type="text" id="nombre" name="nombre" />
-        <br><br>
-        <label for="correo">Tu correo:</label>
-        <input type="email" id="correo" name="correo" />
-        <br><br>
-        <label for="telefono">Tu teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" />
-        <br><br>
-        <label for="mensaje">Tu mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="7" cols="21"></textarea>
-        <br><br>
-        <input type="submit" value="Enviar" />
-      </form>
-    </div>
-  </section>
 
-  <aside>
-    <table>
-      <tr>
-        <td>logomail</td>
-        <td>
-          <a href="mailto: contacto@aplicacionweb.com">contacto@aplicacionweb.com</a>
-        </td>
-      </tr>
-      <tr>
-        <td>logoWhatsapp</td>
-        <td>
-          <a href="https://api.whatsapp.com/send?phone=5491112345678">+54 11 1234-5678</a>
-        </td>
-      </tr>
-      <tr>
-        <td>logoFacebook</td>
-        <td>
-          <a href="https://www.facebook.com/aplicacionweb-ok">aplicacionweb-ok</a>
-        </td>
-      </tr>
-      <tr>
-        <td>logoInstagram</td>
-        <td>
-          <a href="https://www.instagram.com/aplicacionweb/">aplicacionweb</a>
-        </td>
-      </tr>
-    </table>
-  </aside>
 
+
+
+  <!-- DESCRIPCION -->
+  <div class="contenedorFlex redondeoVisual">
+
+    <section class="seccionDescripcion">
+
+      <h1>Contacto</h1>
+
+      <section class="contenido">
+        <div class="formularioContacto">
+          <form method="post" action="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" />
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" />
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="7" cols="21"></textarea>
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+
+      </section>
+
+    </section>
+
+
+
+
+    <!-- SIDEBAR -->
+    <aside>
+
+
+      <h3>Nuestra Visión</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
+        architecto minus perspiciatis expedita nesciunt, aut ratione delectus
+        rem doloribus dolore voluptatibus eos odio dolor cum molestias
+        consectetur itaque ipsam eum! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Itaque
+        quis tempore odio, neque non, aliquam reprehenderit nulla numquam
+        deserunt, quisquam aut. Adipisci, repudiandae. Tempore.
+      </p>
+      <img src="./images/aplicacion.jpg" alt="Aplicacion" />
+    </aside>
+
+  </div>
+
+
+
+
+  <!-- FOOTER -->
   <footer>
-    <p>Copyright Pablo 2021</p>
+    <div class="footerGrid redondeoVisual">
+
+      <section>
+        <div class="formasContacto">
+          <div>
+            <a href="mailto:cuenta@deemail.com" target="_blank">
+              <img src="./images/icono-email1.png" alt="email" />
+            </a>
+          </div>
+          <div>
+            <a href="mailto:cuenta@deemail.com" target="_blank">
+              contacto@aplicacionweb.com
+            </a>
+          </div>
+        </div>
+        <div class="formasContacto">
+          <div>
+            <a href="tel:01234567890">
+              <img src="./images/icono-telefono1.png" alt="telefono" />
+            </a>
+          </div>
+          <div>
+            <a href="tel:01234567890">
+              +54 11 1234-5678
+            </a>
+
+          </div>
+        </div>
+        <div class="formasContacto">
+          <div>
+            <a href="https://goo.gl/maps/VvyzL8QicnmUFGUs7" target="_blank">
+              <img src="./images/icono-ubicacion1.png" alt="ubicacion" />
+            </a>
+          </div>
+          <div>
+            <a href="https://goo.gl/maps/VvyzL8QicnmUFGUs7" target="_blank">
+              Av. Cabildo 2000, C1428, CABA, Argentina
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="formasContacto">
+          <h1>Suscribite a nuestro Newsletter para recibir Promociones & Noticias</h1>
+          <form>
+            <input type="email" name="emailSuscripcion" id="emailSuscripcion" placeholder="tu@email.com">
+            <input type="submit" value="Suscribirme" />
+          </form>
+        </div>
+      </section>
+
+    </div>
   </footer>
 </body>
 

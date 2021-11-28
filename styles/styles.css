@@ -1,95 +1,21 @@
+/* ----------- RESETEOS Y BASICOS ----------- */
 * {
     margin: 0;
     padding: 10px;
     color: black;
-    /*prueba */
+    /* Testeo. Pongo el border en 1 para testeo interno */
     border: 0px solid black;
-    /* fin prueba */
 }
-
 
 html {
     font-size: 1rem;
     padding: 0px;
 }
 
-
 body {
     padding: 0px;
-}
-
-/* Para que no se vea la hamburguesa
-.menuHamburguesa {
-    display: none;
-}
-*/
-
-/*prueba */
-
-.pruebaHeader {
-    background: #03a9f4;
-}
-
-/*
-.pruebaHero {
-    background: #d22b1f;
-}
-
-.pruebaSection {
-    background: #129a22;
-}
-
-.bloqueAside {
-    background: #673ab7;
-}
-*/
-
-
-
-
-
-
-
-
-.pruebaSection {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-}
-
-
-
-/* Nota: ayuda reutilizable para que los elementos no superen los 1200px (convertidos a rem) y si la pantalla es mas grande para que queden centrados. Esto hace que sea mas comoda la lectura en pantallas muy anchas. 
-*/
-.redondeoVisual {
-    margin: auto;
-    max-width: 75rem;
-}
-
-
-/* fin prueba */
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
     background-color: white;
-
     font-family: 'Roboto', sans-serif;
-}
-
-/* Los H1 dentro de una sección tienen un tamaño predeterminado de 1.5em que es distinto al predeterminado fuera de un section (2em). Por eso lo fuerzo aqui */
-h1 {
-    font-size: 2em;
 }
 
 h1,
@@ -101,54 +27,54 @@ h6 {
     font-family: 'PT Sans', sans-serif;
 }
 
+/* Nota: Los H1 dentro de un Section tienen un tamaño predeterminado de 1.5em que es distinto al predeterminado fuera de un Section (2em). Por eso lo fuerzo aqui */
+h1 {
+    font-size: 2em;
+}
+
 a {
     color: white;
     text-decoration: none;
 }
 
-/* HEADER */
+/* ayuda reutilizable para que los elementos no superen los 1200px (convertidos a rem) y si la pantalla es mas grande para que queden centrados. Esto hace que sea mas comoda la lectura en pantallas muy anchas. 
+*/
+.redondeoVisual {
+    margin: auto;
+    max-width: 75rem;
+}
+
+/* --------- FIN RESETEOS Y BASICOS --------- */
+
+
+
+
+
+/* --------- HEADER --------- */
 
 .cabecera {
     position: sticky;
     top: 0px;
-    /*align-items: center;*/
     display: flex;
-    /*margin: 2em;*/
     background-color: rgb(47, 47, 161);
     padding: 0px;
 }
 
 .cabeceraLogo {
-    /* display: inline-block;*/
     flex: 1;
-
-
 }
-
 
 .cabeceraLogo img {
-    height: 50px;
+    height: 40px;
 }
 
-/*
-.menuHamburguesa {
-    display: inline-block;
-    vertical-align: middle;
-    
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-} */
-
 .menuHamburguesa img {
-    height: 30px;
+    height: 25px;
 }
 
 nav {
     flex: 1;
 }
-
 
 nav ul {
     display: flex;
@@ -157,8 +83,13 @@ nav ul {
 
 }
 
+/* ------- FIN HEADER ------- */
 
-/* HERO */
+
+
+
+
+/* --------- HERO --------- */
 
 .imagenPrincipal {
     height: 85vh;
@@ -168,29 +99,79 @@ nav ul {
     background-position: center;
 }
 
+/* ------- FIN HERO ------- */
 
-/* TITULOS */
+
+
+
+
+/* --------- TITULO --------- */
 
 h1 {
     text-align: justify;
-    margin: 20px 0;
-    padding: 0 30px;
-
+    margin: 20px 0px;
+    padding: 0px 30px;
 }
 
-/* CONTENIDO */
+/* ------- FIN TITULO ------- */
+
+
+
+
+
+/* --------- DESCRIPCION --------- */
+
+.seccionDescripcion {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
 
 .contenido {
     text-align: justify;
-    margin: 30px 0;
-    padding: 10px 50px;
+    margin: 20px 0px;
+    padding: 0px 30px;
     font-size: 1.25rem;
     line-height: 1.6;
-
 }
 
+.contenido li {
+    padding: 20px;
+}
 
-/* ------- ASIDE ------- */
+.contenido li p {
+    border-radius: 25px;
+    background: #F2F2F2;
+    padding: 30px;
+    color: rgb(47, 47, 161);
+}
+
+.contenido Table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenido div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------- FIN DESCRIPCION ------- */
+
+
+
+
+
+/* --------- ASIDE --------- */
+
+aside {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 25%;
+    /* Nota: Es lo mismo poner flex: 0 1 25%; */
+    padding: 30px;
+    line-height: 1.3;
+}
 
 aside img {
     max-width: 100%;
@@ -199,25 +180,33 @@ aside img {
     margin-bottom: 30px;
 }
 
-aside {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 25%;
-    /* Nota: Es lo mismo poner flex: 0 1 25%; */
-    padding: 30px;
+aside iframe {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
-.bloqueAside img {}
-
-.bloqueAside p {
+aside p {
     text-align: justify;
     padding: 0px;
+    padding-bottom: 30px;
+}
+
+aside h3 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 /* ------- FIN ASIDE ------- */
 
 
-/* ------- PIE ------- */
+
+
+
+/* --------- PIE --------- */
 
 footer {
     background-color: #616161;
@@ -238,6 +227,8 @@ footer {
 .formasContacto form {
     vertical-align: top;
     padding: 0px;
+    width: 90%;
+    display: inline-block;
 }
 
 .formasContacto div {
@@ -274,46 +265,66 @@ footer {
 
 
 
+/* ----------- MEDIA QUERIES ----------- */
 
-
-
-
-
-
-
-/* TABLAS*/
-
-table {
-    margin: 40px;
-    background-color: rgb(223, 221, 221);
-    border: groove 3px grey;
-
-}
-
-table th {
-    height: 40px;
-    border: 3px solid black;
-    margin: 5px;
-    padding: 5px;
-}
-
-table tr td {
-    height: 30px;
-    border: 1px solid black;
-    margin: 5px;
-    padding: 5px;
+/* Vista Desktop: Oculta Menu Hamburguesa, Muestra Menu Completo */
+@media screen and (min-width: 820px) {
+    .menuHamburguesa {
+        display: none;
+    }
 }
 
 
+/* Vista Tablet y Mobile: Muestra Hamburguesa, Achica la tipografía del Newsletter */
+@media screen and (max-width: 820px) {
+    .menuCompleto {
+        display: none;
+    }
 
-/* FORMULARIO */
+    .menuHamburguesa {
+        display: flex;
+    }
+
+    .formasContacto h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* Vista Mobile: Achica más la tipografía del Newsletter, El h3 del aside (si hay) en queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside) */
+@media screen and (max-width: 640px) {
+    .formasContacto h1 {
+        font-size: 1.5em;
+    }
+
+    aside h3 {
+        padding-top: 0px;
+    }
+}
+
+
+/* Vista Mobile: lleva el Aside hacia abajo */
+@media screen and (min-width: 640px) {
+
+    .contenedorFlex {
+        display: flex;
+    }
+}
+
+/* --------- FIN MEDIA QUERIES --------- */
+
+
+
+
+
+/* ------- FORMULARIOS ------- */
 
 .formularioContacto {
     margin: 40px;
     padding: 20px;
-    width: 30%;
+    width: 90%;
     border: 0px;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #f2f2f2;
 
 }
@@ -351,46 +362,34 @@ input[type=submit] {
     border-radius: 4px;
 }
 
+/* ----- FIN FORMULARIOS ----- */
 
 
-/* MEDIA-QUERY: Vista Desktop - Oculta Menu Hamburguesa, Muestra Menu Completo */
-@media screen and (min-width: 820px) {
-    .menuHamburguesa {
-        display: none;
-    }
-}
 
 
-/* VISTA TABLET y MOBILE (Muestra Hamburguesa). Achica la tipografía del Newsletter */
-@media screen and (max-width: 820px) {
-    .menuCompleto {
-        display: none;
-    }
 
-    .menuHamburguesa {
-        display: flex;
-    }
+/* ----------- TABLAS ----------- */
 
-    .formasContacto h1 {
-        font-size: 2em;
-    }
+table {
+    margin: 40px;
+    background-color: rgb(223, 221, 221);
+    border: groove 3px grey;
 
 }
 
-
-/* VISTA MOBILE. Achica más la tipografía del Newsletter */
-@media screen and (max-width: 640px) {
-    .formasContacto h1 {
-        font-size: 1.5em;
-    }
+table th {
+    text-align: center;
+    height: 40px;
+    border: 3px solid black;
+    margin: 5px;
+    padding: 5px;
 }
 
-
-/* VISTA MOBILE (lleva el Aside hacia abajo) */
-@media screen and (min-width: 640px) {
-    .contenedorFlex {
-        display: flex;
-    }
-
-
+table tr td {
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
 }
+
+/* --------- FIN TABLAS --------- */
