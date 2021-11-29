@@ -172,11 +172,6 @@ h1 {
     grid-gap: 25px;
 }
 
-@media (max-width: 1024px) {
-    .planes-grid {
-        padding-left: 10px;
-    }
-}
 
 section {
     padding: 20px;
