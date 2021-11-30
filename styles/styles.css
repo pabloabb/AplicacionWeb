@@ -231,6 +231,7 @@ section h4 {
 #testimonios-contenedor {
     padding-top: 50px;
     padding-bottom: 80px;
+    text-align: center;
 }
 
 .testimonios-grid {
@@ -250,7 +251,7 @@ section .testimonios {
 }
 
 section h2 {
-    text-align: center;
+    display: inline-block;
     font-size: 1.8rem;
     padding-bottom: 50px;
 }
