@@ -14,7 +14,7 @@ html {
 
 body {
     padding: 0px;
-    background-color: white;
+    background: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -44,6 +44,12 @@ a {
     max-width: 75rem;
 }
 
+/* Gradientes */
+.gradiente {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3956933115042892) 25%, rgba(47, 47, 161, 0.24723392775078779) 100%);
+}
+
 /* --------- FIN RESETEOS Y BASICOS --------- */
 
 
@@ -58,6 +64,7 @@ a {
     display: flex;
     background-color: rgb(47, 47, 161);
     padding: 0px;
+    z-index: 9999;
 }
 
 .cabeceraLogo {
@@ -66,7 +73,23 @@ a {
 
 .cabeceraLogo img {
     height: 40px;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
 }
+
+@keyframes skew {
+    0% {
+        transform: skewX(20deg);
+    }
+
+    100% {
+        transform: skewX(-20deg);
+    }
+}
+
+
+
 
 .menuHamburguesa img {
     height: 25px;
@@ -148,18 +171,17 @@ h1 {
     color: rgb(47, 47, 161);
 }
 
-.contenido Table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .contenido div {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* ------- FIN DESCRIPCION ------- */
 
-/*   Planes   */
+
+
+
+/* --------- PLANES --------- */
 #planes-contenedor {
     padding: 50px;
 }
@@ -171,7 +193,6 @@ h1 {
     grid-auto-rows: auto;
     grid-gap: 25px;
 }
-
 
 section {
     padding: 20px;
@@ -191,14 +212,55 @@ section h4 {
     padding-bottom: 20px;
 }
 
-/* Fin Planes */
+/* ------- FIN PLANES ------- */
 
 
 
 
 
 
-/* ------- FIN DESCRIPCION ------- */
+/* ------- TESTIMONIOS ------- */
+.seccionDescripcion {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+
+}
+
+
+#testimonios-contenedor {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    grid-auto-rows: auto;
+    grid-gap: 15px;
+}
+
+
+section .testimonios {
+    /* Sombra y bordes redondeados*/
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 6px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 50px;
+}
+
+/* ------ FIN TESTIMONIOS ------ */
+
+
+
+
+
 
 
 
@@ -222,6 +284,7 @@ aside img {
     margin-bottom: 30px;
 }
 
+
 aside iframe {
     max-width: 100%;
     height: auto;
@@ -240,6 +303,7 @@ aside h3 {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
+    font-size: 1.5em;
 }
 
 /* ------- FIN ASIDE ------- */
@@ -280,6 +344,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .formasContacto h1 {
@@ -292,6 +357,11 @@ footer {
 .formasContacto img {
     height: 40px;
     padding: 0px;
+    transition: 0.2s;
+}
+
+.formasContacto div:hover {
+    filter: invert(100);
 }
 
 .formasContacto a {
@@ -402,36 +472,15 @@ input[type=submit] {
     padding: 14px 20px;
     margin: 8px 0;
     border-radius: 4px;
+    transition: 0.3s;
+
+}
+
+input[type=submit]:hover {
+    background-color: rgb(47, 47, 161);
+    cursor: pointer;
+    font-size: 1rem;
+
 }
 
 /* ----- FIN FORMULARIOS ----- */
-
-
-
-
-
-/* ----------- TABLAS ----------- */
-
-table {
-    margin: 40px;
-    background-color: rgb(223, 221, 221);
-    border: groove 3px grey;
-
-}
-
-table th {
-    text-align: center;
-    height: 40px;
-    border: 3px solid black;
-    margin: 5px;
-    padding: 5px;
-}
-
-table tr td {
-    height: 30px;
-    border: 1px solid black;
-    margin: 5px;
-    padding: 5px;
-}
-
-/* --------- FIN TABLAS --------- */
