@@ -58,22 +58,20 @@ a {
 
 /* --------- HEADER --------- */
 
-.cabecera {
-    position: sticky;
-    top: 0px;
-    display: flex;
-    background-color: rgb(47, 47, 161);
+
+/* Reseteos del Nav en modo Mobile */
+.container-fluid,
+.navbar-brand,
+.d-inline-block,
+.navbar-collapse,
+.navbar-nav {
     padding: 0px;
-    z-index: 9999;
 }
 
-.cabeceraLogo {
-    flex: 1;
-}
 
-.cabeceraLogo img {
+.animacionLogo {
     height: 40px;
-    animation: skew 3s infinite;
+    animation: skew 2s infinite;
     transform: skew(20deg);
     animation-direction: alternate;
 }
@@ -88,23 +86,18 @@ a {
     }
 }
 
-
-
-
-.menuHamburguesa img {
-    height: 25px;
+/* Remover bordes del menu hamburguesa */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
 
-nav {
-    flex: 1;
-}
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
 
-}
 
 /* ------- FIN HEADER ------- */
 
@@ -380,22 +373,28 @@ footer {
 
 /* ----------- MEDIA QUERIES ----------- */
 
-/* Vista Desktop: Oculta Menu Hamburguesa, Muestra Menu Completo */
-@media screen and (min-width: 820px) {
-    .menuHamburguesa {
-        display: none;
+
+/* Vista Desktop. Ajustes del Navbar */
+@media screen and (min-width: 989px) {
+    .navbar {
+        padding: 10px 70px;
+        border-bottom: 1px solid #D5D8DC;
+        transition-duration: 0.6s;
+    }
+
+    .navbar_escroleado {
+        padding: 0px 70px;
+        transition-duration: 0.6;
     }
 }
 
 
-/* Vista Tablet y Mobile: Muestra Hamburguesa, Achica la tipografía del Newsletter */
-@media screen and (max-width: 820px) {
-    .menuCompleto {
-        display: none;
-    }
-
-    .menuHamburguesa {
-        display: flex;
+/* Vista Tablet y Mobile: Ajustes del Navbar, Achica la tipografía del Newsletter */
+@media screen and (max-width: 990px) {
+    .navbar {
+        padding: 20px 70px;
+        border-bottom: 1px solid #D5D8DC;
+        transition-duration: 0.6s;
     }
 
     .formasContacto h1 {
@@ -404,7 +403,7 @@ footer {
 }
 
 
-/* Vista Mobile: Achica más la tipografía del Newsletter, El h3 del aside (si hay) en queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside) */
+/* Vista Mobile: Achica más la tipografía del Newsletter, El h3 del aside (si hay) en queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside). Achica el Padding del logo y menu en el Navbar para que se vea mejor en mobile*/
 @media screen and (max-width: 640px) {
     .formasContacto h1 {
         font-size: 1.5em;
@@ -413,6 +412,14 @@ footer {
     aside h3 {
         padding-top: 0px;
     }
+
+    .navbar {
+        padding: 20px 30px;
+        border-bottom: 1px solid #D5D8DC;
+        transition-duration: 0.6s;
+    }
+
+
 }
 
 
