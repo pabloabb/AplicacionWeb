@@ -428,6 +428,9 @@ footer {
         transition-duration: 0.6s;
     }
 
+    #contenidoFormulario {
+        padding: 0px 0px;
+    }
 
 }
 
