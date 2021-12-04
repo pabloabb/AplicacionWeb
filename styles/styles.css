@@ -58,7 +58,6 @@ a {
 
 /* --------- HEADER --------- */
 
-
 /* Reseteos del Nav en modo Mobile */
 .container-fluid,
 .navbar-brand,
@@ -96,11 +95,25 @@ a {
     border: none;
 }
 
-
-
+.active {
+    color: rgb(47, 47, 161) !important;
+}
 
 /* ------- FIN HEADER ------- */
 
+
+
+
+/* ------- RESETEOS CAROUSEL ------- */
+#elCarousel,
+.carousel-indicators,
+.carousel-inner,
+.carousel-item,
+.d-block {
+    padding: 0px;
+}
+
+/* ----- FIN RESETEOS CAROUSEL ----- */
 
 
 
@@ -109,7 +122,7 @@ a {
 
 .imagenPrincipal {
     height: 85vh;
-    background-image: url(../images/aplicacion3.jpg);
+    background-image: url(../images/aplicacion4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -126,7 +139,7 @@ a {
 h1 {
     text-align: justify;
     margin: 20px 0px;
-    padding: 0px 30px;
+    padding: 20px 30px;
     text-align: center;
 
 }
@@ -378,7 +391,8 @@ footer {
 @media screen and (min-width: 989px) {
     .navbar {
         padding: 10px 70px;
-        border-bottom: 1px solid #D5D8DC;
+        /*  border-bottom: 1px solid #D5D8DC; */
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition-duration: 0.6s;
     }
 
@@ -393,7 +407,8 @@ footer {
 @media screen and (max-width: 990px) {
     .navbar {
         padding: 20px 70px;
-        border-bottom: 1px solid #D5D8DC;
+        /* border-bottom: 1px solid #D5D8DC; */
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition-duration: 0.6s;
     }
 
@@ -415,7 +430,8 @@ footer {
 
     .navbar {
         padding: 20px 30px;
-        border-bottom: 1px solid #D5D8DC;
+        /* border-bottom: 1px solid #D5D8DC; */
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition-duration: 0.6s;
     }
 
@@ -487,7 +503,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: rgb(47, 47, 161);
     cursor: pointer;
-    font-size: 1rem;
 
 }
 

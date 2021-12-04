@@ -26,28 +26,35 @@
 <body>
 
   <!-- CABECERA -->
-  <header class="cabecera">
-    <div class="cabeceraLogo">
-      <a href="./index.html">
-        <img src="./images/logo.png" alt="logo" />
-      </a>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-0 " href="./index.html"><img src="./images/logo.png" alt="" width="100" height=""
+          class="d-inline-block align-top animacionLogo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menú Hamburgesa">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./caracteristicas.html">Características</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./planes.html">Planes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./soporte.html">Soporte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <nav class="menuCompleto">
-      <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./caracteristicas.html">Características</a></li>
-        <li><a href="./planes.html">Planes</a></li>
-        <li><a href="./soporte.html">Soporte</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <div class="menuHamburguesa">
-      <a href="./index.html">
-        <img src="./images/hamburger4.png" alt="hamburger" />
-      </a>
-    </div>
-  </header>
+  </nav>
 
 
 
@@ -63,7 +70,11 @@
       <div id="planes-contenedor">
         <div class="planes-grid">
           <section class="planes">
-            <h4>Estándar</h4>
+
+            <div class="alert alert-secondary" role="alert">
+              <h5>Estándar</h5>
+            </div>
+
             <p>Lorem ipsum dolor sit amet</p>
             <p>consectetur adipisicing elit</p>
             <p>Quisquam architecto minus</p>
@@ -71,7 +82,9 @@
           </section>
 
           <section class="planes">
-            <h4>Gold</h4>
+            <div class="alert alert-primary" role="alert">
+              <h5>Gold</h5>
+            </div>
             <p>Lorem ipsum dolor sit amet</p>
             <p>consectetur adipisicing elit</p>
             <p>Quisquam architecto minus</p>
@@ -82,7 +95,10 @@
           </section>
 
           <section class="planes animate__animated animate__tada">
-            <h4 class="animate__animated animate__pulse animate__infinite infinite">Premium</h4>
+            <div class="alert alert-warning animate__animated animate__pulse animate__infinite infinite" role="alert">
+              <h5>Premium</h5>
+            </div>
+
             <p>Lorem ipsum dolor sit amet</p>
             <p>consectetur adipisicing elit</p>
             <p>Quisquam architecto minus</p>
@@ -162,10 +178,27 @@
     </div>
   </footer>
 
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Movimiento y achicamiento del Menu al hacer Scroll -->
+  <script>
+    $(function () {
+      $(window).scroll(function () {
+        if ($(window).scrollTop() <= 40) {
+          $('.navbar').removeClass('navbar_escroleado')
+        } else {
+          $('.navbar').addClass('navbar_escroleado')
+        }
+      })
+    })
+  </script>
+
   <!-- Bootstrap Javascript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
+
 </body>
 
 </html>

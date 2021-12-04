@@ -26,7 +26,6 @@
 <body>
 
   <!-- CABECERA -->
-
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
     <div class="container-fluid">
       <a class="navbar-brand mb-0 " href="./index.html"><img src="./images/logo.png" alt="" width="100" height=""
@@ -59,9 +58,34 @@
 
 
 
-
-  <!-- HERO -->
-  <section class="imagenPrincipal animate__animated animate__fadeIn"></section>
+  <!-- CAROUSEL -->
+  <div id="elCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#elCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#elCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#elCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/aplicacion.jpg" class="d-block w-100" alt="aplicacion2">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/aplicacion1.jpg" class="d-block w-100" alt="aplicacion1">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/aplicacion2.jpg" class="d-block w-100" alt="aplicacion">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#elCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#elCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
 
 
 
@@ -105,16 +129,14 @@
     <!-- SIDEBAR -->
     <aside>
 
-      <img src="./images/aplicacion1.jpg" alt="Aplicacion" />
+      <img src="./images/software-adaptable.png" alt="Aplicacion" />
 
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
         architecto minus perspiciatis expedita nesciunt, aut ratione delectus
         rem doloribus dolore voluptatibus eos odio dolor cum molestias
         consectetur itaque ipsam eum! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Itaque
-        quis tempore odio, neque non, aliquam reprehenderit nulla numquam
-        deserunt, quisquam aut. Adipisci, repudiandae. Tempore.
+        adipisicing elit.
       </p>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum exercitationem, repudiandae debitis fugit
         dolorem dignissimos consectetur mollitia obcaecati? Ducimus explicabo dolore maxime recusandae, quod sapiente
