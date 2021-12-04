@@ -328,6 +328,7 @@ footer {
 
 .footerGrid section {
     max-width: 530px;
+    padding: 0px;
 }
 
 .formasContacto form {
