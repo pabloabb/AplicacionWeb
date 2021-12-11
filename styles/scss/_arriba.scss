@@ -1,0 +1,111 @@
+/* --------- HEADER --------- */
+
+/* Reseteos del Nav en modo Mobile */
+.container-fluid,
+.navbar-brand,
+.d-inline-block,
+.navbar-collapse,
+.navbar-nav {
+    padding: 0px;
+}
+
+
+.animacionLogo {
+    height: 40px;
+    animation: skew 2s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+}
+
+
+@keyframes skew {
+    0% {
+        transform: skewX(20deg);
+    }
+
+    100% {
+        transform: skewX(-20deg);
+    }
+}
+
+
+
+/* Remover bordes del menu hamburguesa */
+
+.navbar-toggler {
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    &:active {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.navbar-toggler-icon {
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+
+.active {
+    color: rgb(47, 47, 161) !important;
+}
+
+/* ------- FIN HEADER ------- */
+
+
+
+
+/* ------- RESETEOS CAROUSEL ------- */
+#elCarousel,
+.carousel-indicators,
+.carousel-inner,
+.carousel-item,
+.d-block {
+    padding: 0px;
+}
+
+/* ----- FIN RESETEOS CAROUSEL ----- */
+
+
+
+
+/* --------- HERO --------- */
+
+.imagenPrincipal {
+    height: 85vh;
+    background-image: url(../images/aplicacion4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------- FIN HERO ------- */
+
+
+
+
+
+/* --------- TITULO --------- */
+
+h1 {
+    text-align: justify;
+    margin: 20px 0px;
+    padding: 20px 30px;
+    text-align: center;
+
+}
+
+/* ------- FIN TITULO ------- */

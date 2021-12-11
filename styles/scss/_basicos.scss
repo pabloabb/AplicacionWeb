@@ -1,0 +1,62 @@
+/* ----------- RESETEOS Y BASICOS ----------- */
+
+* {
+    margin: 0;
+    padding: 10px;
+    color: black;
+    /* Testeo. Pongo el border en 1 para testeo interno */
+    border: 0px solid black;
+}
+
+
+html {
+    font-size: 1rem;
+    padding: 0px;
+}
+
+
+body {
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Nota: Los H1 dentro de un Section tienen un tamaño predeterminado de 1.5em que es distinto al predeterminado fuera de un Section (2em). Por eso lo fuerzo aqui */
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2em;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ayuda reutilizable para que los elementos no superen los 1200px (convertidos a rem) y si la pantalla es mas grande para que queden centrados. Esto hace que sea mas comoda la lectura en pantallas muy anchas. 
+*/
+.redondeoVisual {
+    margin: auto;
+    max-width: 75rem;
+}
+
+
+/* Gradientes */
+.gradiente {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3956933115042892) 25%, rgba(47, 47, 161, 0.24723392775078779) 100%);
+}
+
+
+/* --------- FIN RESETEOS Y BASICOS --------- */
