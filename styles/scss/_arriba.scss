@@ -1,5 +1,6 @@
 /* --------- HEADER --------- */
 
+
 /* Reseteos del Nav en modo Mobile */
 .container-fluid,
 .navbar-brand,
@@ -32,29 +33,27 @@
 
 /* Remover bordes del menu hamburguesa */
 
-.navbar-toggler {
+.sinBordes {
     outline: none;
     box-shadow: none;
     border: none;
+}
+
+.navbar-toggler {
+    @extend .sinBordes;
 
     &:focus {
-        outline: none;
-        box-shadow: none;
-        border: none;
+        @extend .sinBordes;
     }
 
     &:active {
-        outline: none;
-        box-shadow: none;
-        border: none;
+        @extend .sinBordes;
     }
 }
 
 .navbar-toggler-icon {
     &:focus {
-        outline: none;
-        box-shadow: none;
-        border: none;
+        @extend .sinBordes;
     }
 }
 
@@ -86,7 +85,7 @@
 
 .imagenPrincipal {
     height: 85vh;
-    background-image: url(../images/aplicacion4.jpg);
+    background-image: url(../images/aplicacion4.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
