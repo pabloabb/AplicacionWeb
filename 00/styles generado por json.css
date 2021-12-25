@@ -1,0 +1,338 @@
+@charset "UTF-8";
+/* ----------- RESETEOS Y BASICOS ----------- */
+* {
+  margin: 0;
+  padding: 10px;
+  color: black;
+  /* Testeo. Pongo el border en 1 para testeo interno */
+  border: 0px solid black; }
+
+html {
+  font-size: 1rem;
+  padding: 0px; }
+
+body {
+  padding: 0px;
+  background: white;
+  font-family: 'Roboto', sans-serif; }
+
+/* Nota: Los H1 dentro de un Section tienen un tamaño predeterminado de 1.5em que es distinto al predeterminado fuera de un Section (2em). Por eso lo fuerzo aqui */
+h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2em; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Sans', sans-serif; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+/* ayuda reutilizable para que los elementos no superen los 1200px (convertidos a rem) y si la pantalla es mas grande para que queden centrados. Esto hace que sea mas comoda la lectura en pantallas muy anchas. 
+*/
+.redondeoVisual {
+  margin: auto;
+  max-width: 75rem; }
+
+/* Gradientes */
+.gradiente {
+  background: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.395693) 25%, rgba(47, 47, 161, 0.247234) 100%); }
+
+/* --------- FIN RESETEOS Y BASICOS --------- */
+/* --------- HEADER --------- */
+/* Reseteos del Nav en modo Mobile */
+.container-fluid,
+.navbar-brand,
+.d-inline-block,
+.navbar-collapse,
+.navbar-nav {
+  padding: 0px; }
+
+.animacionLogo {
+  height: 40px;
+  animation: skew 2s infinite;
+  transform: skew(20deg);
+  animation-direction: alternate; }
+
+@keyframes skew {
+  0% {
+    transform: skewX(20deg); }
+  100% {
+    transform: skewX(-20deg); } }
+
+/* Remover bordes del menu hamburguesa */
+.sinBordes, .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: none; }
+
+.active {
+  color: #2f2fa1 !important; }
+
+/* ------- FIN HEADER ------- */
+/* ------- RESETEOS CAROUSEL ------- */
+#elCarousel,
+.carousel-indicators,
+.carousel-inner,
+.carousel-item,
+.d-block {
+  padding: 0px; }
+
+/* ----- FIN RESETEOS CAROUSEL ----- */
+/* --------- HERO --------- */
+.imagenPrincipal {
+  height: 85vh;
+  background-image: url(../images/aplicacion4.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+/* ------- FIN HERO ------- */
+/* --------- TITULO --------- */
+h1 {
+  text-align: justify;
+  margin: 20px 0px;
+  padding: 20px 30px;
+  text-align: center; }
+
+/* ------- FIN TITULO ------- */
+/* --------- DESCRIPCION --------- */
+.seccionDescripcion {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%; }
+
+.contenido {
+  text-align: justify;
+  margin: 20px 0px;
+  padding: 0px 30px;
+  font-size: 1.25rem;
+  line-height: 1.6; }
+  .contenido li {
+    padding: 20px; }
+    .contenido li p {
+      border-radius: 25px;
+      background: #F2F2F2;
+      padding: 30px;
+      color: #2f2fa1; }
+  .contenido div {
+    margin-left: auto;
+    margin-right: auto; }
+
+/* ------- FIN DESCRIPCION ------- */
+/* Sombra y bordes redondeados de cajas*/
+/* --------- PLANES --------- */
+#planes-contenedor {
+  padding: 50px; }
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  grid-auto-rows: auto;
+  grid-gap: 25px; }
+
+section {
+  padding: 20px; }
+  section .planes {
+    /* Sombra y bordes redondeados*/
+    background-color: #f8f8f8;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px; }
+  section h4 {
+    font-size: 1.3rem;
+    color: #2f2fa1;
+    padding-bottom: 20px; }
+
+/* ------- FIN PLANES ------- */
+/* ------- TESTIMONIOS ------- */
+#testimonios-contenedor {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  text-align: center; }
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  grid-auto-rows: auto;
+  grid-gap: 15px; }
+
+section .testimonios {
+  /* Sombra y bordes redondeados*/
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 6px; }
+
+section h2 {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding-bottom: 50px; }
+
+/* ------ FIN TESTIMONIOS ------ */
+/* --------- ASIDE --------- */
+aside {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  /* Nota: Es lo mismo poner flex: 0 1 25%; */
+  padding: 30px;
+  line-height: 1.3; }
+  aside img {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+    margin-bottom: 30px; }
+  aside iframe {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+    margin-top: 30px;
+    margin-bottom: 60px; }
+  aside p {
+    text-align: justify;
+    padding: 0px;
+    padding-bottom: 30px; }
+  aside h3 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 1.5em; }
+
+/* ------- FIN ASIDE ------- */
+/* ------- FORMULARIOS ------- */
+.formularioContacto {
+  margin: 40px;
+  padding: 20px;
+  width: 100%;
+  border: 0px;
+  border-radius: 20px;
+  background-color: #f2f2f2; }
+
+#emailSuscripcion {
+  text-align: center; }
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; }
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4e9751;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  transition: 0.3s; }
+  input[type=submit]:hover {
+    background-color: #2f2fa1;
+    cursor: pointer; }
+
+/* ----- FIN FORMULARIOS ----- */
+/* --------- PIE --------- */
+footer {
+  background-color: #616161;
+  text-align: center;
+  padding: 60px; }
+
+.footerGrid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .footerGrid section {
+    max-width: 530px;
+    padding: 0px; }
+
+.formasContacto form {
+  vertical-align: top;
+  padding: 0px;
+  width: 90%;
+  display: inline-block; }
+
+.formasContacto div {
+  overflow-wrap: anywhere;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s; }
+  .formasContacto div:hover {
+    filter: invert(100); }
+
+.formasContacto h1 {
+  font-size: 2.4em;
+  text-align: center;
+  margin: 0px;
+  padding: 10px 0px 30px; }
+
+.formasContacto img {
+  height: 40px;
+  padding: 0px;
+  transition: 0.2s; }
+
+.formasContacto a {
+  color: black; }
+
+/* ------- FIN PIE ------- */
+/* ----------- MEDIA QUERIES ----------- */
+/* Vista Desktop. Ajustes del Navbar */
+@media screen and (min-width: 989px) {
+  .navbar {
+    padding: 10px 70px;
+    /*  border-bottom: 1px solid #D5D8DC; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition-duration: 0.6s; }
+  .navbar_escroleado {
+    padding: 0px 70px;
+    transition-duration: 0.6; } }
+
+/* Vista Tablet y Mobile: Ajustes del Navbar, Achica la tipografía del Newsletter */
+@media screen and (max-width: 990px) {
+  .navbar {
+    padding: 20px 70px;
+    /* border-bottom: 1px solid #D5D8DC; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition-duration: 0.6s; }
+  .formasContacto h1 {
+    font-size: 2em; } }
+
+/* Vista Mobile: Achica más la tipografía del Newsletter, El h3 del aside (si hay) en queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside). Achica el Padding del logo y menu en el Navbar para que se vea mejor en mobile*/
+@media screen and (max-width: 640px) {
+  .formasContacto h1 {
+    font-size: 1.5em; }
+  aside h3 {
+    padding-top: 0px; }
+  .navbar {
+    padding: 20px 30px;
+    /* border-bottom: 1px solid #D5D8DC; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition-duration: 0.6s; }
+  #contenidoFormulario {
+    padding: 0px 0px; } }
+
+/* Vista Mobile: lleva el Aside hacia abajo */
+@media screen and (min-width: 640px) {
+  .contenedorFlex {
+    display: flex; } }
+
+/* --------- FIN MEDIA QUERIES --------- */
