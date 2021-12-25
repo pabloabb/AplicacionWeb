@@ -104,7 +104,7 @@ a {
 
 
 
-/* ------- CONFIGURACIONES CAROUSEL ------- */
+/* ------- RESETEOS CAROUSEL ------- */
 #elCarousel,
 .carousel-indicators,
 .carousel-inner,
@@ -113,11 +113,7 @@ a {
     padding: 0px;
 }
 
-/* .carousel-item {
-    height: 89vh;
-} */
-
-/* ----- FIN CONFIGURACIONES CAROUSEL ----- */
+/* ----- FIN RESETEOS CAROUSEL ----- */
 
 
 
