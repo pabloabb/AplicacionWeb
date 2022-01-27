@@ -433,78 +433,6 @@ footer {
 
 
 
-
-
-/* ----------- MEDIA QUERIES ----------- */
-
-
-/* Vista Desktop. Ajustes del Navbar */
-@media screen and (min-width: 989px) {
-    .navbar {
-        padding: 10px 70px;
-        /*  border-bottom: 1px solid #D5D8DC; */
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        transition-duration: 0.6s;
-    }
-
-    .navbar_escroleado {
-        padding: 0px 70px;
-        transition-duration: 0.6;
-    }
-}
-
-
-/* Vista Tablet y Mobile: Ajustes del Navbar, Achica la tipografía del Newsletter */
-@media screen and (max-width: 990px) {
-    .navbar {
-        padding: 20px 70px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        transition-duration: 0.6s;
-    }
-
-    .formasContacto h5 {
-        font-size: 2em;
-    }
-}
-
-
-/* Vista Mobile: Achica más la tipografía del Newsletter, El h3 del aside (si hay) en queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside). Achica el Padding del logo y menu en el Navbar para que se vea mejor en mobile*/
-@media screen and (max-width: 640px) {
-    .formasContacto h5 {
-        font-size: 1.5em;
-    }
-
-    aside h3 {
-        padding-top: 0px;
-    }
-
-    .navbar {
-        padding: 20px 30px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        transition-duration: 0.6s;
-    }
-
-    #contenidoFormulario {
-        padding: 0px 0px;
-    }
-
-}
-
-
-/* Vista Mobile: lleva el Aside hacia abajo */
-@media screen and (min-width: 640px) {
-
-    .contenedorFlex {
-        display: flex;
-    }
-}
-
-/* --------- FIN MEDIA QUERIES --------- */
-
-
-
-
-
 /* ------- FORMULARIOS ------- */
 
 .formularioContacto {
@@ -559,3 +487,81 @@ input[type=submit]:hover {
 }
 
 /* ----- FIN FORMULARIOS ----- */
+
+
+
+
+
+
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Se asegura que el Aside esté siempre al costado salvo cuando la resolución baja mucho y entonces el Aside va hacia abajo */
+@media screen and (min-width: 640px) {
+
+    .contenedorFlex {
+        display: flex;
+    }
+}
+
+
+/* Vista Desktop: Ajustes del Navbar */
+@media screen and (min-width: 989px) {
+    .navbar {
+        padding: 10px 70px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition-duration: 0.6s;
+    }
+
+    .navbar_escroleado {
+        padding: 0px 70px;
+        transition-duration: 0.6;
+    }
+}
+
+
+/* Vista Tablet y Mobile: Ajustes del Navbar. Achica la tipografía del Newsletter */
+@media screen and (max-width: 990px) {
+    .navbar {
+        padding: 20px 70px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition-duration: 0.6s;
+    }
+
+    .formasContacto h5 {
+        font-size: 2em;
+    }
+}
+
+
+/* Vista Mobile: Achica más la tipografía del Newsletter. El h3 del aside queda sin top padding para que no haya gran espacio en blanco cuando los bloques están apilados (descripcion y aside). Achica el Padding del logo y menu en el Navbar para que se vea mejor en mobile. Ajusta el padding del Formulario, Descripción y Soporte.*/
+@media screen and (max-width: 640px) {
+    .formasContacto h5 {
+        font-size: 1.5em;
+    }
+
+    aside h3 {
+        padding-top: 0px;
+    }
+
+    .navbar {
+        padding: 20px 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition-duration: 0.6s;
+    }
+
+    #contenidoFormulario {
+        padding: 0px 0px;
+    }
+
+    .seccionDescripcion {
+        padding: 10px;
+    }
+
+    #acordionSoporte {
+        padding: 80px 20px 100px;
+    }
+
+}
+
+/* --------- FIN MEDIA QUERIES --------- */
